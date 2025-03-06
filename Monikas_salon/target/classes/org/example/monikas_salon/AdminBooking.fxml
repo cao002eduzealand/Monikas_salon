@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="917.0" prefWidth="1284.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminBookingController">
+
+    <!-- Title Label -->
+    <Label layoutX="20" layoutY="20" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Booking Management" />
+
+    <!-- Table View for Bookings -->
+    <TableView fx:id="bookingTable" layoutX="14.0" layoutY="55.0" prefHeight="598.0" prefWidth="852.0">
+        <columns>
+            <TableColumn fx:id="bookingIdColumn" prefWidth="85.0" text="Booking ID" />
+            <TableColumn fx:id="customerNameColumn" prefWidth="131.0" text="Customer Name" />
+            <TableColumn fx:id="employeeNameColumn" prefWidth="150.0" text="Employee Name" />
+            <TableColumn fx:id="hairstyleColumn" prefWidth="169.0" text="Hairstyle" />
+            <TableColumn fx:id="startTimeColumn" prefWidth="174.0" text="Start Time" />
+            <TableColumn fx:id="endTimeColumn" prefWidth="141.0" text="End Time" />
+        </columns>
+    </TableView>
+
+    <!-- Buttons -->
+    <Button fx:id="switchToCreateBookingButton" layoutX="1094.0" layoutY="743.0" onAction="#switchToCreateBooking" prefWidth="150" style="-fx-font-size: 14px; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-padding: 10px;" text="Create Booking" />
+
+    <Button fx:id="backButton" layoutX="36.0" layoutY="797.0" onAction="#switchToMenu" prefHeight="51.0" prefWidth="91.0" text="Back">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Button>
+
+    <Button fx:id="cancelBookingButton" layoutX="866.0" layoutY="743.0" onAction="#cancelBooking" prefWidth="150" style="-fx-font-size: 14px; -fx-background-color: #FF0000; -fx-text-fill: white; -fx-padding: 10px;" text="Cancel Booking" />
+
+
+    <Button fx:id="createdBookingsButton" layoutX="1004.0" layoutY="38.0" onAction="#showCreatedBookings" prefHeight="59.0" prefWidth="203.0" style="-fx-font-size: 14px; -fx-background-color: #2196F3; -fx-text-fill: white; -fx-padding: 10px;" text="Show bookings" />
+
+    <Button fx:id="finishedBookingsButton" layoutX="1004.0" layoutY="111.0" onAction="#showFinishedBookings" prefHeight="59.0" prefWidth="203.0" style="-fx-font-size: 14px; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-padding: 10px;" text="Show Finished Bookings" />
+
+    <Button fx:id="cancelledBookingsButton" layoutX="1004.0" layoutY="178.0" onAction="#showCancelledBookings" prefHeight="65.0" prefWidth="203.0" style="-fx-font-size: 14px; -fx-background-color: #FF5722; -fx-text-fill: white; -fx-padding: 10px;" text="Show Cancelled Bookings" />
+
+    <!-- Styling for Spacing and Layout -->
+    <VBox alignment="CENTER" layoutX="20" layoutY="480" spacing="20">
+        <!-- This can hold additional buttons or controls if needed -->
+    </VBox>
+
+</AnchorPane>

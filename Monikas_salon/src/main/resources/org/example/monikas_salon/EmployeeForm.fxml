@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0"
+            style="-fx-background-color: #f4f4f4; -fx-padding: 20px;"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controllers.EmployeeFormController">
+
+    <VBox spacing="15" alignment="CENTER">
+        <!-- Title -->
+        <Label fx:id="titleLabel" text="Employee Form"
+               style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+        <!-- Form Fields -->
+        <VBox spacing="10" alignment="CENTER_LEFT" style="-fx-padding: 10px;">
+            <Label text="Name:"/>
+            <TextField fx:id="nameField" promptText="Enter name" style="-fx-pref-width: 250px;"/>
+
+            <Label text="Password:"/>
+            <TextField fx:id="passwordField" promptText="Enter password" style="-fx-pref-width: 250px;"/>
+        </VBox>
+
+        <!-- Buttons -->
+        <HBox spacing="20" alignment="CENTER">
+            <Button fx:id="saveButton" onAction="#saveEmployee"
+                    text="Save"
+                    style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px;"/>
+
+            <Button fx:id="cancelButton" onAction="#cancel"
+                    text="Cancel"
+                    style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-size: 14px;"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

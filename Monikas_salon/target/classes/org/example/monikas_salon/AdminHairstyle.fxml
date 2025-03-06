@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #f4f4f4; -fx-padding: 20px;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AdminHairstylesController">
+
+    <!-- Title -->
+    <Label layoutX="20" layoutY="20" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Hairstyle Management" />
+
+    <!-- TableView for Hairstyles -->
+    <TableView fx:id="hairstyleTableView" layoutX="20" layoutY="60" prefHeight="300" prefWidth="760">
+        <columns>
+            <TableColumn fx:id="hairstyleIDColumn" prefWidth="100" text="ID" />
+            <TableColumn fx:id="hairstyleNameColumn" prefWidth="250" text="Name" />
+            <TableColumn fx:id="hairstyleDurationColumn" prefWidth="150" text="Duration (min)" />
+        </columns>
+    </TableView>
+
+<!--    &lt;!&ndash; Form Fields &ndash;&gt;-->
+<!--    <VBox layoutX="20" layoutY="380" spacing="10">-->
+
+<!--        <Label text="Duration (minutes):" />-->
+<!--        <ComboBox fx:id="hairstyleDurationComboBox" prefWidth="300" promptText="Select duration" />-->
+
+<!--        <Label text="Existing Hairstyles:" />-->
+<!--        <ComboBox fx:id="hairstyleComboBox" prefWidth="300" promptText="Select a hairstyle" />-->
+<!--    </VBox>-->
+
+    <!-- Buttons -->
+    <HBox layoutX="20" layoutY="500" spacing="20" />
+     <Button fx:id="addHairstyleButton" layoutX="668.0" layoutY="381.0" onAction="#addHairstyle" prefHeight="46.0" prefWidth="121.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px;" text="Add Hairstyle" />
+     <Button fx:id="backButton" layoutX="20.0" layoutY="502.0" onAction="#cancel" prefHeight="55.0" prefWidth="103.0" text="Go back" />
+
+     <Button fx:id="updateHairstyleButton" layoutX="668.0" layoutY="443.0" onAction="#updateHairstyle" prefHeight="46.0" prefWidth="121.0" style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 14px;" text="Update Hairstyle" />
+
+     <Button fx:id="deleteHairstyleButton" layoutX="668.0" layoutY="500.0" onAction="#deleteHairstyle" prefHeight="46.0" prefWidth="121.0" style="-fx-background-color: #FF5722; -fx-text-fill: white; -fx-font-size: 14px;" text="Delete Hairstyle" />
+
+
+</AnchorPane>

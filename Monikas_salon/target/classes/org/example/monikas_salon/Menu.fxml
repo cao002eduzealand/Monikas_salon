@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MenuController"
+            style="-fx-background-color: #f4f4f4; -fx-padding: 20px;">
+
+    <!-- Header Section -->
+    <top>
+        <HBox spacing="20" alignment="CENTER_LEFT" style="-fx-background-color: #4CAF50; -fx-padding: 15px;">
+            <Label fx:id="showLoggedInEmployee" text="Welcome, Employee!"
+                   style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;"/>
+            <Region fx:id="spacer"/> <!-- This ensures spacing in the HBox -->
+            <Button fx:id="logOutButton" text="Log Out"
+                    style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-size: 14px;"
+                    onAction="#switchToLogin"/>
+        </HBox>
+    </top>
+
+    <!-- Center Section (Main Menu Buttons) -->
+    <center>
+        <VBox spacing="15" alignment="CENTER" style="-fx-padding: 30px;">
+            <Button fx:id="switchToCreateBookingButton" text="Create Booking"
+                    style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-size: 16px;"
+                    onAction="#switchToBooking"/>
+            <Label text="All Bookings:" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <Label fx:id="seeAllBookings" text="(No bookings yet)"
+                   style="-fx-font-size: 14px; -fx-text-fill: #555555;"/>
+            <Button fx:id="switchToAdminEmployeeButton" onAction="#switchToAdminEmployee" text="Administrate employess"/>
+            <Button fx:id="goToAdminHairstyleButton" onAction="#switchToAdminHairstyle" text="Administrate Hairstyles"/>
+        </VBox>
+    </center>
+
+</BorderPane>
